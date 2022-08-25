@@ -1,0 +1,47 @@
+{
+  "name": "@enhala/eslint-plugin-tsvue",
+  "version": "1.0.0",
+  "description": "ESLint plugin with support for Vue + TypeScript + Babel",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "repository": "git@github.com:enhala/eslint-plugin-tsvue.git",
+  "author": "Max Slotov",
+  "license": "MIT",
+  "keywords": [
+    "eslint",
+    "eslintplugin",
+    "vue",
+    "typescript",
+    "babel"
+  ],
+  "scripts": {
+    "build": "tsc",
+    "clean": "tsc --clean",
+    "format": "prettier . --write",
+    "lint": "eslint --fix './src/**/*'",
+    "prepare": "husky install"
+  },
+  "dependencies": {
+    "vue-sfc-parser": "^0.1.2"
+  },
+  "devDependencies": {
+    "@commitlint/cli": "^17.0.3",
+    "@commitlint/config-conventional": "^17.0.3",
+    "@types/eslint": "^8.4.6",
+    "@typescript-eslint/eslint-plugin": "^5.35.1",
+    "@typescript-eslint/parser": "^5.35.1",
+    "eslint": "^8.22.0",
+    "eslint-config-prettier": "^8.5.0",
+    "husky": "^8.0.1",
+    "lint-staged": ">=10",
+    "prettier": "^2.7.1",
+    "typescript": "*"
+  },
+  "peerDependencies": {
+    "eslint": ">=6.0"
+  },
+  "lint-staged": {
+    "*.{js,ts}": "eslint --fix",
+    "*.{ts,mts,cts,tsx,js,mjs,cjs,jsx,json,md,css}": "yarn run format"
+  }
+}
