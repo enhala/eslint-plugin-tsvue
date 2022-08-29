@@ -1,6 +1,6 @@
 {
   "name": "@enhala/eslint-plugin-tsvue",
-  "version": "1.0.0",
+  "version": "0.0.1",
   "description": "ESLint plugin with support for Vue + TypeScript + Babel",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
@@ -46,6 +46,7 @@
   },
   "files": [
     "dist",
+    "package.json",
     "README.md",
     "LICENSE"
   ]
