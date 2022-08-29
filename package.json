@@ -1,10 +1,11 @@
 {
   "name": "@enhala/eslint-plugin-tsvue",
-  "version": "1.0.0-0",
+  "version": "1.0.0-1",
   "description": "ESLint plugin with support for Vue + TypeScript + Babel",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
-  "repository": "git@github.com:enhala/eslint-plugin-tsvue.git",
+  "homepage": "https://github.com/enhala/eslint-plugin-tsvue#readme",
+  "repository": "github:enhala/eslint-plugin-tsvue",
   "author": "Max Slotov",
   "license": "MIT",
   "keywords": [
