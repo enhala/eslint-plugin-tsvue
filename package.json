@@ -1,6 +1,6 @@
 {
   "name": "@enhala/eslint-plugin-tsvue",
-  "version": "0.0.1",
+  "version": "1.0.0-0",
   "description": "ESLint plugin with support for Vue + TypeScript + Babel",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
@@ -16,10 +16,13 @@
   ],
   "scripts": {
     "build": "tsc",
-    "clean": "tsc --clean",
+    "clean": "tsc --build --clean",
     "format": "prettier . --write",
     "lint": "eslint --fix './src/**/*'",
-    "prepare": "husky install"
+    "prepare": "husky install",
+    "test": "",
+    "version": "yarn clean && yarn build",
+    "postversion": "git push --tags && yarn publish . --tag $npm_package_version && git push && echo \"Successfully released version $npm_package_version!\""
   },
   "dependencies": {
     "vue-sfc-parser": "^0.1.2"
