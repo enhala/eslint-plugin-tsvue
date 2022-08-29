@@ -1,7 +1,7 @@
 import { ESLint } from 'eslint';
 import processor from './processor';
 
-export default {
+export = {
   processors: {
     '.vue': processor,
   },
