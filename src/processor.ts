@@ -1,7 +1,7 @@
 import type { Linter } from 'eslint';
 import { parseComponent } from 'vue-sfc-parser';
 
-export default {
+export = {
   preprocess(text: string, filename: string): Linter.ProcessorFile[] {
     const parseResult = parseComponent(text);
     const script = parseResult.script;
