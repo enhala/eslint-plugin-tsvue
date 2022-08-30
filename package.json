@@ -35,13 +35,15 @@
     "@typescript-eslint/parser": "^5.35.1",
     "eslint": "^8.22.0",
     "eslint-config-prettier": "^8.5.0",
+    "eslint-plugin-vue": "^9.4.0",
     "husky": "^8.0.1",
     "lint-staged": ">=10",
     "prettier": "^2.7.1",
     "typescript": "*"
   },
   "peerDependencies": {
-    "eslint": ">=6.0"
+    "eslint": ">=6.0",
+    "eslint-plugin-vue": ">=7.0"
   },
   "lint-staged": {
     "*.{js,ts}": "eslint --fix",

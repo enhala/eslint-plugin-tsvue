@@ -2,7 +2,7 @@
 
 An `eslint` plugin companion to Vue, TypeScript, and Babel. `@enhala/eslint-plugin-tsvue` allows having Vue 3 or Vue 2.7 Single File Components with `setup` and `lang="ts"`, i.e. Options API, Composition API, all at the same time, mixed and matched, in one repository, and enables proper linting of all types of Components.
 
-Enabling the plugin for ESLint, converts in the background SFCs with `lang="ts"` filenames to `.tsvue` extension, which then allows defining custom parsers.
+Enabling the plugin for ESLint, converts in the background SFCs with `lang="ts"` filenames to `.tsvue` extension, which then allows defining custom parsers. Regular JS SFCs will be processed as usuall, by [`eslint-plugin-vue`](https://eslint.vuejs.org/).
 Note: the actual files don't change in any way, this is just for ESLint and further parsing within ESLint.
 
 _Inspired by [mjeanroy/eslint-plugin-tsvue-sample](https://github.com/mjeanroy/eslint-plugin-tsvue-sample)._
@@ -18,13 +18,13 @@ yarn add -D @enhala/eslint-plugin-tsvue
 
 ### Use
 
-To use, enable the plugin by defining `@enhala/tsvue` in `plugins` array of your `.eslintrc.js` **before** `vue` plugin.
+To use, replace the `vue` plugin with `@enhala/tsvue` in `plugins` array of your `.eslintrc.js`.
 Now that Vue SFCs with `lang="ts"` have `.tsvue` extensions, it's possible to define custom parsers, like `@typescript-eslint/parser` by using `overrides`.
 
 ```js
 // .eslintrc.js
 module.exports = {
-  plugins: ['@babel', '@enhala/tsvue', 'vue', '@typescript-eslint'],
+  plugins: ['@babel', '@enhala/tsvue', '@typescript-eslint'],
   overrides: [
     {
       files: ['*.tsvue'],
